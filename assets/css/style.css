@@ -2,6 +2,9 @@
 :root {
   --primary: #ffaf08;
   --black: #070506;
+  --border: 1.6px solid rgba(0, 0, 0, 0.1);
+  --border-hover: 1.6px solid var(--black);
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -70,7 +73,8 @@ body {
   align-items: center;
   padding: 15px 3%;
   margin: 0;
-  z-index: 5;
+  transform-style: preserve-3d;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .header .header-1 {
@@ -100,18 +104,18 @@ body {
   }
 }
 .header .header-1 .search-form {
-  background: rgba(255, 255, 255, 0.195);
+  background: rgba(7, 5, 6, 0.95);
   display: flex;
   align-items: center;
+  border: var(--border);
   border-radius: 10px;
   height: 40px;
   width: 60%;
   position: fixed;
-  top: 65px;
-  right: -500px;
-  z-index: -1;
-  transition: right 0.7s;
-  z-index: -1;
+  top: -100%;
+  right: 3%;
+  transform: translateZ(-10px);
+  transition: top 0.7s;
 }
 @media (min-width: 768px) {
   .header .header-1 .search-form {
@@ -139,7 +143,7 @@ body {
   color: #fff;
 }
 .header .header-1 .search-form.active {
-  right: 3%;
+  top: 67px;
 }
 .header .header-1 .left {
   display: flex;
@@ -211,7 +215,7 @@ body {
   bottom: 0;
   width: 100%;
   right: -5000px;
-  background: var(--primary);
+  background: rgba(255, 177, 8, 0.95);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -238,6 +242,184 @@ body {
   border-radius: 5px;
 }
 .dropdown-nav.active {
+  right: 0;
+}
+
+.login-form-container {
+  background: rgba(255, 177, 8, 0.95);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s;
+}
+.login-form-container #close-login {
+  color: black;
+  font-size: 36px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.login-form-container #close-login:hover {
+  color: var(--primary);
+}
+.login-form-container form {
+  border: var(--border);
+  width: 350px;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  background: #fff;
+}
+.login-form-container form h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  color: var(--black);
+}
+.login-form-container form span {
+  display: block;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.login-form-container form .box {
+  border: var(--border);
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  margin: 5px 0;
+}
+.login-form-container form .checkbox {
+  display: flex;
+  align-items: center;
+  padding: 5px 1;
+  gap: 5px;
+}
+.login-form-container form .checkbox input[type=checkbox] {
+  transform: scale(1.1);
+}
+.login-form-container form .checkbox label {
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.login-form-container form input[type=submit] {
+  background: var(--primary);
+  border: var(--primary);
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.login-form-container form p {
+  font-size: 13px;
+  text-transform: capitalize;
+  color: var(--black);
+}
+.login-form-container form p a, .login-form-container form p label {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.login-form-container.active {
+  right: 0;
+}
+
+.reg-form-container {
+  background: rgba(255, 177, 8, 0.95);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s;
+}
+.reg-form-container #close-reg {
+  color: var(--black);
+  font-size: 36px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.reg-form-container #close-reg:hover {
+  color: var(--primary);
+}
+.reg-form-container form {
+  border: var(--border);
+  width: 350px;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  background: #fff;
+}
+.reg-form-container form h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  color: var(--black);
+}
+.reg-form-container form span {
+  display: block;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.reg-form-container form .box {
+  border: var(--border);
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  margin: 5px 0;
+}
+.reg-form-container form .checkbox {
+  display: flex;
+  align-items: center;
+  padding: 5px 1;
+  gap: 5px;
+}
+.reg-form-container form .checkbox input[type=checkbox] {
+  transform: scale(1.1);
+}
+.reg-form-container form .checkbox label {
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.reg-form-container form input[type=submit] {
+  background: var(--primary);
+  border-color: var(--primary);
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.reg-form-container form p {
+  font-size: 13px;
+  text-transform: capitalize;
+  color: var(--black);
+}
+.reg-form-container form p label {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.reg-form-container.active {
   right: 0;
 }
 
