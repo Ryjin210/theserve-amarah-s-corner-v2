@@ -481,8 +481,53 @@ section {
         .col {
             min-width: 240px;
             max-width: 300px;
-            img {
+            background: var(--black);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            h4 {
+                font-weight: 600;
+            }
+            h5 {
+                font-weight: 500;
+            }
+            .image-cont {
                 width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+    #load-more {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        .load-more {
+            padding: 7px 10px;
+            background: var(--black);
+            color: var(--primary);
+            outline: none;
+            border: 3px solid var(--black);
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            &:hover {
+                background: var(--primary);
+                border-color: rgba(7, 5, 6, 0.5);
+                color: var(--black);
             }
         }
     }

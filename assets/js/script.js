@@ -48,6 +48,22 @@ document.querySelector('#close-reg').onclick = () => {
     reg.classList.remove('active');
 }
 
+var updates_col = document.querySelectorAll('.col');
+var load_more = document.querySelector('.load-more');
+
+var current_updates_col = 2;
+load_more.addEventListener('click', function() {
+    for (var i = current_updates_col; i < current_updates_col + 2; i++) {
+        if (updates_col[i]) {
+            updates_col[i].style.display = 'block';
+        }
+    }
+    current_updates_col += 2;
+    if (current_updates_col >= updates_col.length) {
+        event.target.style.display = 'none';
+    }
+});
+
 window.onscroll = () => {
 
     navbar.classList.remove('active');
@@ -55,8 +71,7 @@ window.onscroll = () => {
 
     if (window.scrollY > 80) {
         document.querySelector('.custom-nav').classList.add('active');
-    }
-    else {
+    } else {
         document.querySelector('.custom-nav').classList.remove('active');
     }
 }
