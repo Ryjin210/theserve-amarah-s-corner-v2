@@ -45,11 +45,13 @@ body {
 }
 
 .title-header {
+  margin: 0 auto;
   background: var(--black);
   color: var(--primary);
   text-align: center;
   border-radius: 5px;
   margin-bottom: 20px;
+  max-width: 250px;
 }
 
 .header {
@@ -151,8 +153,7 @@ body {
   align-items: center;
 }
 @media (min-width: 768px) {
-  .header .header-1 .left #search-btn,
-.header .header-1 .left #navbar {
+  .header .header-1 .left #search-btn, .header .header-1 .left #navbar {
     display: none;
   }
 }
@@ -269,19 +270,30 @@ body {
   color: var(--primary);
 }
 .login-form-container form {
+  position: relative;
   border: var(--border);
   width: 350px;
   margin: 20px;
   padding: 15px;
   box-shadow: var(--box-shadow);
   border-radius: 10px;
-  background: #fff;
+  background: var(--black);
+  color: #fff;
+}
+.login-form-container form .logo {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+.login-form-container form .logo img {
+  width: 60px;
 }
 .login-form-container form h3 {
   text-transform: uppercase;
   text-align: center;
   font-size: 24px;
-  color: var(--black);
+  color: #fff;
+  margin-top: 20px;
 }
 .login-form-container form span {
   display: block;
@@ -321,12 +333,18 @@ body {
   margin: 10px 0;
   border-radius: 5px;
 }
+.login-form-container form input[type=submit]:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--primary);
+}
 .login-form-container form p {
   font-size: 13px;
   text-transform: capitalize;
-  color: var(--black);
+  color: #fff;
 }
-.login-form-container form p a, .login-form-container form p label {
+.login-form-container form p a,
+.login-form-container form p label {
   color: var(--primary);
   text-decoration: underline;
 }
@@ -358,19 +376,30 @@ body {
   color: var(--primary);
 }
 .reg-form-container form {
+  position: relative;
   border: var(--border);
   width: 350px;
   margin: 20px;
   padding: 15px;
   box-shadow: var(--box-shadow);
   border-radius: 10px;
-  background: #fff;
+  background: var(--black);
+  color: #fff;
+}
+.reg-form-container form .logo {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+.reg-form-container form .logo img {
+  width: 60px;
 }
 .reg-form-container form h3 {
   text-transform: uppercase;
   text-align: center;
   font-size: 24px;
-  color: var(--black);
+  color: #fff;
+  margin-top: 20px;
 }
 .reg-form-container form span {
   display: block;
@@ -410,10 +439,15 @@ body {
   margin: 10px 0;
   border-radius: 5px;
 }
+.reg-form-container form input[type=submit]:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--primary);
+}
 .reg-form-container form p {
   font-size: 13px;
   text-transform: capitalize;
-  color: var(--black);
+  color: #fff;
 }
 .reg-form-container form p label {
   color: var(--primary);
@@ -451,29 +485,17 @@ section {
 }
 
 .updates .row {
-  display: grid;
-  grid-template-columns: repeat(1fr);
-  padding: 0 10px;
-  grid-gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
-@media (min-width: 768px) {
-  .updates .row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 992px) {
-  .updates .row {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.updates .row .col {
+  min-width: 240px;
+  max-width: 300px;
 }
 .updates .row .col img {
   width: 100%;
-}
-.updates .row .col h5 {
-  font-weight: 600;
-}
-.updates .row .col:last-child {
-  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
