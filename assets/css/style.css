@@ -717,12 +717,6 @@ section {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) {
-  .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__user-profile .feedbacks__name-user {
-    text-align: left;
-    margin-top: unset;
-  }
-}
 .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__user-profile .feedbacks__name-user h5 {
   font-weight: 600;
 }
@@ -730,7 +724,7 @@ section {
   margin-top: 10px;
   color: var(--primary);
 }
-@media (min-width: 321px) {
+@media (min-width: 768px) {
   .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__rate {
     margin-top: unset;
   }
