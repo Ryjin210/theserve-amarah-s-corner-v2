@@ -64,6 +64,22 @@ load_more.addEventListener('click', function() {
     }
 });
 
+var feedbacks_col = document.querySelectorAll(".feedbacks__card");
+var load_more_feedbacks = document.querySelector(".load-more-feedbacks");
+
+var current_feedbacks_col = 2;
+load_more_feedbacks.addEventListener("click", function () {
+  for (var i = current_feedbacks_col; i < current_feedbacks_col + 2; i++) {
+    if (feedbacks_col[i]) {
+      feedbacks_col[i].style.display = "block";
+    }
+  }
+  current_feedbacks_col += 2;
+  if (current_feedbacks_col >= feedbacks_col.length) {
+    event.target.style.display = "none";
+  }
+});
+
 window.onscroll = () => {
 
     navbar.classList.remove('active');
@@ -78,7 +94,7 @@ window.onscroll = () => {
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 'auto',
-    spaceBetween: 20,
+    spaceBetween: 15,
     centeredSlides: true,
     loop: true,
     autoplay: {
