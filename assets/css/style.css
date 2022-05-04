@@ -289,28 +289,48 @@ body {
   top: 5px;
 }
 .login-form-container form .logo img {
-  width: 60px;
+  width: 50px;
+}
+@media (min-width: 321px) {
+  .login-form-container form .logo img {
+    width: 60px;
+  }
 }
 .login-form-container form h3 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   color: #fff;
   margin-top: 20px;
+}
+@media (min-width: 321px) {
+  .login-form-container form h3 {
+    font-size: 24px;
+  }
 }
 .login-form-container form span {
   display: block;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 12px;
+}
+@media (min-width: 321px) {
+  .login-form-container form span {
+    font-size: 14px;
+  }
 }
 .login-form-container form .box {
   border: var(--border);
   width: 100%;
-  height: 40px;
+  height: 30px;
   border-radius: 5px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 13px;
   margin: 5px 0;
+}
+@media (min-width: 321px) {
+  .login-form-container form .box {
+    height: 40px;
+  }
 }
 .login-form-container form .checkbox {
   display: flex;
@@ -322,19 +342,30 @@ body {
   transform: scale(1.1);
 }
 .login-form-container form .checkbox label {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: capitalize;
+}
+@media (min-width: 321px) {
+  .login-form-container form .checkbox label {
+    font-size: 13px;
+  }
 }
 .login-form-container form input[type=submit] {
   background: var(--primary);
   border: var(--primary);
   width: 100%;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
-  height: 40px;
+  height: 30px;
   margin: 10px 0;
   border-radius: 5px;
+}
+@media (min-width: 321px) {
+  .login-form-container form input[type=submit] {
+    height: 40px;
+    font-size: 16px;
+  }
 }
 .login-form-container form input[type=submit]:hover {
   background: #fff;
@@ -342,9 +373,14 @@ body {
   color: var(--primary);
 }
 .login-form-container form p {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: capitalize;
   color: #fff;
+}
+@media (min-width: 321px) {
+  .login-form-container form p {
+    font-size: 13px;
+  }
 }
 .login-form-container form p a,
 .login-form-container form p label {
@@ -369,7 +405,7 @@ body {
   transition: right 0.5s;
 }
 .reg-form-container #close-reg {
-  color: var(--black);
+  color: black;
   font-size: 36px;
   position: absolute;
   top: 10px;
@@ -395,28 +431,48 @@ body {
   top: 5px;
 }
 .reg-form-container form .logo img {
-  width: 60px;
+  width: 50px;
+}
+@media (min-width: 321px) {
+  .reg-form-container form .logo img {
+    width: 60px;
+  }
 }
 .reg-form-container form h3 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   color: #fff;
   margin-top: 20px;
+}
+@media (min-width: 321px) {
+  .reg-form-container form h3 {
+    font-size: 24px;
+  }
 }
 .reg-form-container form span {
   display: block;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 12px;
+}
+@media (min-width: 321px) {
+  .reg-form-container form span {
+    font-size: 14px;
+  }
 }
 .reg-form-container form .box {
   border: var(--border);
   width: 100%;
-  height: 40px;
+  height: 30px;
   border-radius: 5px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 13px;
   margin: 5px 0;
+}
+@media (min-width: 321px) {
+  .reg-form-container form .box {
+    height: 40px;
+  }
 }
 .reg-form-container form .checkbox {
   display: flex;
@@ -428,19 +484,30 @@ body {
   transform: scale(1.1);
 }
 .reg-form-container form .checkbox label {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: capitalize;
+}
+@media (min-width: 321px) {
+  .reg-form-container form .checkbox label {
+    font-size: 13px;
+  }
 }
 .reg-form-container form input[type=submit] {
   background: var(--primary);
-  border-color: var(--primary);
+  border: var(--primary);
   width: 100%;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
-  height: 40px;
+  height: 30px;
   margin: 10px 0;
   border-radius: 5px;
+}
+@media (min-width: 321px) {
+  .reg-form-container form input[type=submit] {
+    height: 40px;
+    font-size: 16px;
+  }
 }
 .reg-form-container form input[type=submit]:hover {
   background: #fff;
@@ -448,10 +515,16 @@ body {
   color: var(--primary);
 }
 .reg-form-container form p {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: capitalize;
   color: #fff;
 }
+@media (min-width: 321px) {
+  .reg-form-container form p {
+    font-size: 13px;
+  }
+}
+.reg-form-container form p a,
 .reg-form-container form p label {
   color: var(--primary);
   text-decoration: underline;
@@ -547,7 +620,10 @@ section {
 }
 
 .menu {
-  background: var(--black);
+  background: url(../images/navbar.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
   padding: 20px 6%;
 }
 .menu .title-header {
@@ -562,7 +638,7 @@ section {
   max-width: 240px;
   padding: 20px;
   padding-bottom: 10px;
-  background: rgba(255, 255, 255, 0.075);
+  background: rgba(255, 255, 255, 0.342);
   color: #fff;
   text-align: center;
   border-radius: 5px;

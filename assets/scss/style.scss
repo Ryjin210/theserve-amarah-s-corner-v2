@@ -308,31 +308,43 @@ body {
             top: 5px;
 
             img {
-                width: 60px;
+                @media (min-width: 321px) {
+                    width: 60px;
+                }
+                width: 50px;
             }
         }
 
         h3 {
+            @media (min-width: 321px) {
+                font-size: 24px;
+            }
             text-transform: uppercase;
             text-align: center;
-            font-size: 24px;
+            font-size: 22px;
             color: #fff;
             margin-top: 20px;
         }
 
         span {
+            @media (min-width: 321px) {
+                font-size: 14px;
+            }
             display: block;
             text-transform: capitalize;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .box {
+            @media (min-width: 321px) {
+                height: 40px;
+            }
             border: var(--border);
             width: 100%;
-            height: 40px;
+            height: 30px;
             border-radius: 5px;
             padding: 10px;
-            font-size: 15px;
+            font-size: 13px;
             margin: 5px 0;
         }
 
@@ -347,19 +359,26 @@ body {
             }
 
             label {
-                font-size: 13px;
+                @media (min-width: 321px) {
+                    font-size: 13px;
+                }
+                font-size: 12px;
                 text-transform: capitalize;
             }
         }
 
         input[type="submit"] {
+            @media (min-width: 321px) {
+                height: 40px;
+                font-size: 16px;
+            }
             background: var(--primary);
             border: var(--primary);
             width: 100%;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 13px;
             font-weight: 700;
-            height: 40px;
+            height: 30px;
             margin: 10px 0;
             border-radius: 5px;
 
@@ -371,7 +390,10 @@ body {
         }
 
         p {
-            font-size: 13px;
+            @media (min-width: 321px) {
+                font-size: 13px;
+            }
+            font-size: 12px;
             text-transform: capitalize;
             color: #fff;
 
@@ -403,7 +425,7 @@ body {
     transition: right 0.5s;
 
     #close-reg {
-        color: var(--black);
+        color: black;
         font-size: 36px;
         position: absolute;
         top: 10px;
@@ -431,31 +453,43 @@ body {
             top: 5px;
 
             img {
-                width: 60px;
+                @media (min-width: 321px) {
+                    width: 60px;
+                }
+                width: 50px;
             }
         }
 
         h3 {
+            @media (min-width: 321px) {
+                font-size: 24px;
+            }
             text-transform: uppercase;
             text-align: center;
-            font-size: 24px;
+            font-size: 22px;
             color: #fff;
             margin-top: 20px;
         }
 
         span {
+            @media (min-width: 321px) {
+                font-size: 14px;
+            }
             display: block;
             text-transform: capitalize;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .box {
+            @media (min-width: 321px) {
+                height: 40px;
+            }
             border: var(--border);
             width: 100%;
-            height: 40px;
+            height: 30px;
             border-radius: 5px;
             padding: 10px;
-            font-size: 15px;
+            font-size: 13px;
             margin: 5px 0;
         }
 
@@ -470,19 +504,26 @@ body {
             }
 
             label {
-                font-size: 13px;
+                @media (min-width: 321px) {
+                    font-size: 13px;
+                }
+                font-size: 12px;
                 text-transform: capitalize;
             }
         }
 
         input[type="submit"] {
+            @media (min-width: 321px) {
+                height: 40px;
+                font-size: 16px;
+            }
             background: var(--primary);
-            border-color: var(--primary);
+            border: var(--primary);
             width: 100%;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 13px;
             font-weight: 700;
-            height: 40px;
+            height: 30px;
             margin: 10px 0;
             border-radius: 5px;
 
@@ -494,10 +535,14 @@ body {
         }
 
         p {
-            font-size: 13px;
+            @media (min-width: 321px) {
+                font-size: 13px;
+            }
+            font-size: 12px;
             text-transform: capitalize;
             color: #fff;
 
+            a,
             label {
                 color: var(--primary);
                 text-decoration: underline;
@@ -615,7 +660,10 @@ section {
 }
 
 .menu {
-    background: var(--black);
+    background: url(../images/navbar.png);
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
     padding: 20px 6%;
     .title-header {
         background: var(--primary);
@@ -630,7 +678,7 @@ section {
             max-width: 240px;
             padding: 20px;
             padding-bottom: 10px;
-            background: rgba(255, 255, 255, 0.075);
+            background: rgba(255, 255, 255, 0.342);
             color: #fff;
             text-align: center;
             border-radius: 5px;
