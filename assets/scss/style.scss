@@ -614,10 +614,10 @@ section {
         .menu__card {
             display: flex;
             justify-content: center;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             gap: 10px;
-            width: 180px;
+            width: 240px;
             height: auto;
             padding: 10px;
             background: rgba(255, 255, 255, 0.103);
@@ -629,10 +629,10 @@ section {
                 width: 100%;
                 height: 100px;
                 overflow: hidden;
-
+                display: flex;
+                align-items: center;
                 img {
                     width: 100%;
-                    height: 100%;
                     object-fit: cover;
 
                     &:hover {
@@ -646,6 +646,8 @@ section {
             }
 
             .menu__name {
+                text-align: center;
+                width: 100%;
                 flex-grow: 1;
             }
         }
