@@ -613,8 +613,7 @@ section {
   flex-wrap: wrap;
 }
 .updates .row .col {
-  min-width: 240px;
-  max-width: 300px;
+  width: 500px;
   background: var(--black);
   color: #fff;
   padding: 20px;
@@ -683,42 +682,22 @@ section {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   display: none;
-}
-@media (min-width: 768px) {
-  .feedbacks .feedbacks__cont .feedbacks__card {
-    justify-content: unset;
-    align-items: unset;
-    text-align: unset;
-  }
 }
 .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 @media (min-width: 768px) {
   .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top {
-    flex-direction: row;
+    flex-wrap: unset;
   }
 }
 .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__user-profile {
-  margin-top: 10px;
-  order: 2;
   display: flex;
   align-items: center;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__user-profile {
-    order: unset;
-    flex-direction: row;
-    margin-top: unset;
-  }
 }
 .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__user-profile .feedbacks__user-profile__image {
   border: 2px solid var(--primary);
@@ -735,10 +714,8 @@ section {
   object-position: center;
 }
 .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__user-profile .feedbacks__name-user {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__user-profile .feedbacks__name-user {
@@ -750,21 +727,19 @@ section {
   font-weight: 600;
 }
 .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__rate {
+  margin-top: 10px;
   color: var(--primary);
+}
+@media (min-width: 321px) {
+  .feedbacks .feedbacks__cont .feedbacks__card .feedbacks__top .feedbacks__rate {
+    margin-top: unset;
+  }
 }
 .feedbacks .feedbacks__cont .feedbacks__card:nth-child(1), .feedbacks .feedbacks__cont .feedbacks__card:nth-child(2) {
   display: block;
 }
 .feedbacks .feedbacks__cont .feedbacks__comments h5 {
-  margin-top: 10px;
-  text-align: center;
   font-weight: 500;
-}
-@media (min-width: 768px) {
-  .feedbacks .feedbacks__cont .feedbacks__comments h5 {
-    text-align: left;
-    margin-top: unset;
-  }
 }
 .feedbacks #load-more-feedbacks {
   display: flex;

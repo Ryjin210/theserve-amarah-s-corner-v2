@@ -660,8 +660,7 @@ section {
     flex-wrap: wrap;
 
     .col {
-      min-width: 240px;
-      max-width: 300px;
+      width: 500px;
       background: var(--black);
       color: #fff;
       padding: 20px;
@@ -733,11 +732,6 @@ section {
     width: 100%;
     gap: 20px;
     .feedbacks__card {
-      @media (min-width: 768px) {
-        justify-content: unset;
-        align-items: unset;
-        text-align: unset;
-      }
       width: 500px;
       box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
       background: var(--black);
@@ -747,29 +741,18 @@ section {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       display: none;
       .feedbacks__top {
         @media (min-width: 768px) {
-          flex-direction: row;
+          flex-wrap: unset;
         }
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-direction: column;
+        flex-wrap: wrap;
         .feedbacks__user-profile {
-          @media (min-width: 768px) {
-            order: unset;
-            flex-direction: row;
-            margin-top: unset;
-          }
-          margin-top: 10px;
-          order: 2;
           display: flex;
           align-items: center;
-          flex-direction: column;
           .feedbacks__user-profile__image {
             border: 2px solid var(--primary);
             width: 50px;
@@ -789,16 +772,18 @@ section {
               text-align: left;
               margin-top: unset;
             }
-            margin-top: 10px;
             display: flex;
             flex-direction: column;
-            text-align: center;
             h5 {
               font-weight: 600;
             }
           }
         }
         .feedbacks__rate {
+          @media (min-width: 321px) {
+            margin-top: unset;
+          }
+          margin-top: 10px;
           color: var(--primary);
         }
       }
@@ -809,12 +794,6 @@ section {
     }
     .feedbacks__comments {
       h5 {
-        @media (min-width: 768px) {
-          text-align: left;
-          margin-top: unset;
-        }
-        margin-top: 10px;
-        text-align: center;
         font-weight: 500;
       }
     }
